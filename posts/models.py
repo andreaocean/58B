@@ -26,6 +26,7 @@ class Post(models.Model):
     rate = models.IntegerField(default=0)
     category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.CASCADE)
     tags = models.ManyToManyField(Tag,blank=True)
+  
     # HW2
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)    
